@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  .carousel-item {
+    height: calc(100% - 40px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+
+    &:last-child {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(87, 87, 87, 0.2);
+      transform: translateY(-5px);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
