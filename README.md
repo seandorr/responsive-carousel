@@ -48,13 +48,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### \<CarouselItem />
 
-| Property  | Description                                             | Type           | Default   |
-| --------- | ------------------------------------------------------- | -------------- | --------- |
-| children  | Content to be displayed inside of the \<CarouselItem /> | any.isRequired | -         |
-| className | Custom class for styling                                | string         | undefined |
-| id        | Custom id for styling                                   | string         | undefined |
-| style     | Custom inline styling                                   | object         | undefined |
-| color     | Define a background-color for the \<CarouselItem />     | string         | random    |
+| Property  | Description                                             | Type     | Default   |
+| --------- | ------------------------------------------------------- | -------- | --------- |
+| children  | Content to be displayed inside of the \<CarouselItem /> | any      | -         |
+| className | Custom class for styling                                | string   | undefined |
+| id        | Custom id for styling                                   | string   | undefined |
+| style     | Custom inline styling                                   | object   | undefined |
+| onClick   | Set the handler to handle click event                   | object   | undefined |
+| color     | Define a background-color for the \<CarouselItem />     | function | undefined |
 
 <br />
 
