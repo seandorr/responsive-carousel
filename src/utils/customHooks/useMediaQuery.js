@@ -1,22 +1,26 @@
 import { useState, useEffect } from "react";
+import { mediaQueries } from "../constants/mediaQueries";
 import useWindowSize from "./useWindowSize";
 
 const useMediaQuery = () => {
+  const { xs, sm, md, lg, xl } = mediaQueries;
   const getWindowWidth = useWindowSize().width;
   const [mediaQuery, setMediaQuery] = useState({
-    sm: getWindowWidth <= 576,
-    md: getWindowWidth > 576 && getWindowWidth <= 768,
-    lg: getWindowWidth > 768 && getWindowWidth <= 992,
-    xl: getWindowWidth > 992,
+    xs: getWindowWidth > xs && getWindowWidth <= sm,
+    sm: getWindowWidth > sm && getWindowWidth <= md,
+    md: getWindowWidth > md && getWindowWidth <= lg,
+    lg: getWindowWidth > lg && getWindowWidth <= xl,
+    xl: getWindowWidth > xl,
   });
 
   useEffect(() => {
     const handleResize = () => {
       setMediaQuery({
-        sm: getWindowWidth <= 576,
-        md: getWindowWidth > 576 && getWindowWidth <= 768,
-        lg: getWindowWidth > 768 && getWindowWidth <= 992,
-        xl: getWindowWidth > 992,
+        xs: getWindowWidth > xs && getWindowWidth <= sm,
+        sm: getWindowWidth > sm && getWindowWidth <= md,
+        md: getWindowWidth > md && getWindowWidth <= lg,
+        lg: getWindowWidth > lg && getWindowWidth <= xl,
+        xl: getWindowWidth > xl,
       });
     };
 
@@ -25,7 +29,7 @@ const useMediaQuery = () => {
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [getWindowWidth]);
+  }, [getWindowWidth, xs, sm, md, lg, xl]);
 
   return mediaQuery;
 };
