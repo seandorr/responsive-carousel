@@ -11,6 +11,7 @@ const CarouselItem = ({
   className,
   id,
   style,
+  onClick,
   numberOfItemsShown,
   gap,
   color,
@@ -69,10 +70,11 @@ const CarouselItem = ({
   `;
   return (
     <div
-      className={`carousel-item ${className}`}
+      className={`carousel-item ${className} ${onClick ? "clickable" : ""}`}
       css={carouselItemStyles}
       id={id}
       style={style}
+      onClick={onClick}
     >
       {children}
     </div>
@@ -80,10 +82,11 @@ const CarouselItem = ({
 };
 
 CarouselItem.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   className: PropTypes.string,
   id: PropTypes.string,
   style: PropTypes.object,
+  onClick: PropTypes.func,
   numberOfItemsShown: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.shape({
@@ -102,6 +105,7 @@ CarouselItem.defaultProps = {
   className: "",
   id: undefined,
   style: undefined,
+  onClick: undefined,
   numberOfItemsShown: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 },
   gap: 20,
   color: undefined,
