@@ -1,9 +1,8 @@
 import React from "react";
-import Carousel from "./components/Carousel/Carousel";
-import CarouselItem from "./components/CarouselItem/CarouselItem";
-import "./styles.scss";
+import Carousel from "../components/Carousel/Carousel";
+import CarouselItem from "../components/CarouselItem/CarouselItem";
 
-const App = () => {
+const Demo = () => {
   return (
     <>
       <Carousel
@@ -25,6 +24,6 @@ const App = () => {
   );
 };
 
-App.propTypes = {};
+Demo.propTypes = {};
 
-export default App;
+export default Demo;

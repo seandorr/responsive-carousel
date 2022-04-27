@@ -2,9 +2,9 @@
 import { css } from "@emotion/react";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import useMediaQuery from "../../utils/customHooks/useMediaQuery";
-import useWindowSize from "../../utils/customHooks/useWindowSize";
-import useGeneratedColor from "../../utils/customHooks/useGeneratedColor";
+import useMediaQuery from "../utils/customHooks/useMediaQuery";
+import useWindowSize from "../utils/customHooks/useWindowSize";
+import useGeneratedColor from "../utils/customHooks/useGeneratedColor";
 
 const CarouselItem = ({
   children,
