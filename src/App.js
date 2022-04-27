@@ -1,15 +1,27 @@
 import React from "react";
 import Carousel from "./components/Carousel/Carousel";
-import { carouselItems } from "./components/Carousel/utils/constants/carouselItems";
+import CarouselItem from "./components/CarouselItem/CarouselItem";
 import "./styles.scss";
 
 const App = () => {
   return (
-    <Carousel
-      carouselItems={carouselItems}
-      numberOfItemsShown={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-      carouselItemHeight={400}
-    />
+    <>
+      <Carousel
+        numberOfItemsShown={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
+        carouselItemHeight={400}
+        gap={20}
+      >
+        <CarouselItem onClick={(event) => null} />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+      </Carousel>
+    </>
   );
 };
 
