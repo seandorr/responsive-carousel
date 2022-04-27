@@ -1,82 +1,65 @@
-import React, { useState, useEffect } from "react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import React from "react";
 import PropTypes from "prop-types";
-import CarouselItem from "../CarouselItem/CarouselItem";
-import useWindowSize from "../../utils/customHooks/useWindowSize";
-import useMediaQuery from "../../utils/customHooks/useMediaQuery";
 
 const Carousel = ({
+  children,
+  className,
+  id,
+  style,
   numberOfItemsShown,
-  carouselItems,
   carouselItemHeight,
+  gap,
 }) => {
-  const [shownItems, setShownItems] = useState(numberOfItemsShown);
-  const { sm, md, lg, xl } = useMediaQuery();
-  const { sm: small, md: medium, lg: large, xl: xlarge } = numberOfItemsShown;
-
-  const getWindowWidth = useWindowSize().width;
-
-  useEffect(() => {
-    const getMediaQuery = () => {
-      if (typeof numberOfItemsShown == "number") {
-        setShownItems(numberOfItemsShown);
-      } else {
-        sm && setShownItems(small);
-        md && setShownItems(medium);
-        lg && setShownItems(large);
-        xl && setShownItems(xlarge);
-      }
-    };
-
-    getMediaQuery();
-  }, [large, lg, md, medium, sm, small, xl, xlarge, numberOfItemsShown]);
-
-  const numberOfItemsShownIncludingOverflow = shownItems + 1;
-  const carouselItemMargin = 20;
-  const carouselMargins =
-    numberOfItemsShownIncludingOverflow * carouselItemMargin;
-  const getWindowWidthWithoutMargins = getWindowWidth - carouselMargins;
-  const overflowItem = 0.5;
-
-  const carouselStyles = {
-    height: carouselItemHeight + carouselItemMargin * 2,
-  };
+  const carouselStyles = css`
+    height: ${carouselItemHeight + gap * 2}px;
+  `;
 
   return (
-    <div className="carousel-container" style={carouselStyles}>
-      {carouselItems.map((carouselItem) => {
-        const { children, id, color } = carouselItem;
-        const carouselItemStyles = {
-          minWidth: getWindowWidthWithoutMargins / (shownItems + overflowItem),
-          marginLeft: carouselItemMargin,
-          backgroundColor: color,
-        };
-        return (
-          <CarouselItem key={id} style={carouselItemStyles}>
-            {children}
-          </CarouselItem>
-        );
+    <div
+      className={`carousel-container ${className}`}
+      id={id}
+      style={style}
+      css={carouselStyles}
+    >
+      {React.Children.map(children, (child) => {
+        return React.cloneElement(child, {
+          numberOfItemsShown,
+          carouselItemHeight,
+          gap,
+        });
       })}
     </div>
   );
 };
 
 Carousel.propTypes = {
-  carouselItems: PropTypes.any,
-  carouselItemHeight: PropTypes.number,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  id: PropTypes.string,
+  style: PropTypes.object,
   numberOfItemsShown: PropTypes.oneOfType([
     PropTypes.number,
-    {
+    PropTypes.shape({
+      xs: PropTypes.number,
       sm: PropTypes.number,
       md: PropTypes.number,
       lg: PropTypes.number,
       xl: PropTypes.number,
-    },
+    }),
   ]),
+  carouselItemHeight: PropTypes.number,
+  gap: PropTypes.number,
 };
 
 Carousel.defaultProps = {
+  className: "",
+  id: undefined,
+  style: undefined,
+  numberOfItemsShown: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 },
   carouselItemHeight: 400,
-  numberOfItemsShown: { sm: 1, md: 2, lg: 3, xl: 4 },
+  gap: 20,
 };
 
 export default Carousel;
