@@ -25,13 +25,9 @@ li {
     justify-content: center;
     transition: 0.4s ease-in-out;
 
-    &:last-child {
-      margin-right: 20px;
-    }
-
     &:hover {
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(87, 87, 87, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transform: translateY(-5px);
     }
   }
