@@ -1,0 +1,16 @@
+.carousel-item {
+  height: calc(100% - 40px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease-in-out;
+
+  &.clickable {
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+    }
+  }
+}
