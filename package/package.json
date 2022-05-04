@@ -1,6 +1,6 @@
 {
-  "name": "react-responsive-carousel",
-  "version": "1.0.0",
+  "name": "@sean_dorr/react-responsive-carousel",
+  "version": "1.0.1",
   "description": "A good-looking, fully customisable, and responsive carousel",
   "scripts": {
     "rollup": "rollup -c"

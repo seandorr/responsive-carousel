@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Carousel from "./components/Carousel/Carousel";
-import CarouselItem from "./components/CarouselItem/CarouselItem";
+import { Carousel, CarouselItem } from "@sean_dorr/react-responsive-carousel";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
