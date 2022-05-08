@@ -1,0 +1,53 @@
+{
+  "name": "@sean_dorr/react-responsive-carousel",
+  "version": "1.0.10",
+  "description": "A good-looking, fully customisable, and responsive carousel",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && NODE_ENV=production babel lib --out-dir dist --copy-files"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@emotion/react": "^11.9.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^10.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.50.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seandorr/responsive-carousel.git"
+  },
+  "keywords": [
+    "react",
+    "carousel",
+    "responsive"
+  ],
+  "author": "Sean Dorr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seandorr/responsive-carousel/issues"
+  },
+  "homepage": "https://github.com/seandorr/responsive-carousel#readme"
+}
