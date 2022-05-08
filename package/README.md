@@ -1,42 +1,12 @@
 # React Responsive Carousel
 
-## In order to view the project:
+Create a good-looking React carousel with responsive and adaptive items based on media queries.
 
-Clone the GitHub project in your terminal:
-
-```zsh
-git clone https://github.com/seandorr/responsive-carousel.git
-```
-
-Enter the project directory:
+## Install the dependency
 
 ```zsh
-cd responsive-carousel
+npm i @sean_dorr/react-responsive-carousel
 ```
-
-<br />
-
-# Playing with the demo:
-
-```zsh
-cd demo
-```
-
-And then install all of the dependencies with:
-
-```zsh
-npm install
-```
-
-Now start the dev server with:
-
-```zsh
-npm start
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
----
 
 ## Customizing the Carousel
 

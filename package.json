@@ -1,0 +1,17 @@
+{
+  "name": "react-responsive-carousel",
+  "scripts": {
+    "demo": "cd demo && npm run start",
+    "build": "cd package && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seandorr/responsive-carousel.git"
+  },
+  "author": "Sean Dorr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seandorr/responsive-carousel/issues"
+  },
+  "homepage": "https://github.com/seandorr/responsive-carousel#readme"
+}

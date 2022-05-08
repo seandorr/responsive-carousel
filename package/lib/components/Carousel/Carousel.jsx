@@ -1,8 +1,8 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import React from "react";
-import PropTypes, { InferProps } from "prop-types";
-import "./carousel.scss";
+import PropTypes from "prop-types";
+import "../styles.scss";
 
 const Carousel = ({
   children,
@@ -12,7 +12,7 @@ const Carousel = ({
   numberOfItemsShown,
   carouselItemHeight,
   gap,
-}: InferProps<typeof Carousel.propTypes>) => {
+}) => {
   const carouselStyles = css`
     height: ${carouselItemHeight + gap * 2}px;
   `;

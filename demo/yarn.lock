@@ -1753,10 +1753,10 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
-"@sean_dorr/react-responsive-carousel@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@sean_dorr/react-responsive-carousel/-/react-responsive-carousel-1.0.1.tgz#ea2fa457b33cf81b9b31a2e152c28cb47ad02926"
-  integrity sha512-NQ/G5Xs3/AQI5//R4fPPfFGzFfTT/SxEx2wq2pSLc1R3V7SWqsY9Yftn3obTquEnu8tsNvwr9gCidhFbwsFAVg==
+"@sean_dorr/react-responsive-carousel@1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@sean_dorr/react-responsive-carousel/-/react-responsive-carousel-1.0.10.tgz#9e8a48bee2b7cc6d67d27bb2856ab02017f9d536"
+  integrity sha512-Go/luL8usbw/uADPwAGDdiEYbPFYcGS1D7TXkANSwWICI4Pq9NxkuPvuomrPi+rkQYkuWcmis1DjiU+Mvb9yow==
 
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"

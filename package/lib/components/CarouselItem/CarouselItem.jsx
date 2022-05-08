@@ -1,11 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import { useState, useEffect } from "react";
-import PropTypes, {InferProps} from "prop-types";
-import useMediaQuery from "../utils/customHooks/useMediaQuery.js";
+import PropTypes from "prop-types";
+import useMediaQuery from "../utils/customHooks/useMediaQuery";
 import useWindowSize from "../utils/customHooks/useWindowSize";
 import useGeneratedColor from "../utils/customHooks/useGeneratedColor";
-import "./carousel-item.scss";
 
 const CarouselItem = ({
   children,
@@ -16,7 +15,7 @@ const CarouselItem = ({
   numberOfItemsShown,
   gap,
   color,
-}: InferProps<typeof CarouselItem.propTypes>) => {
+}) => {
   const [shownItems, setShownItems] = useState(numberOfItemsShown);
   const { xs, sm, md, lg, xl } = useMediaQuery();
   const {
