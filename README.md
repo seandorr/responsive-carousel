@@ -1,5 +1,12 @@
 # React Responsive Carousel
 
+## Download the package via:
+
+```zsh
+npm i @sean_dorr/react-responsive-carousel
+```
+You can also view the package at https://www.npmjs.com/package/@sean_dorr/react-responsive-carousel
+
 ## In order to view the project:
 
 Clone the GitHub project in your terminal:
