@@ -1,5 +1,7 @@
 # React Responsive Carousel
 
+See a live demo to see what's possible with the components at https://seandorr.com/responsive-carousel
+
 ## Download the package via:
 
 ```zsh
